@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const card = {
   hidden: { opacity: 0, y: 40 },
@@ -14,68 +15,85 @@ export default function Home() {
         <h1 className="text-xl font-semibold tracking-wide">Seona</h1>
 
         <div className="space-x-6 text-sm">
-          <a href="#about">About</a>
-          <a href="#work">Things I've Done</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" className="hover:text-pink-500">About</a>
+          <a href="#work" className="hover:text-pink-500">Things I've Done</a>
+          <a href="#projects" className="hover:text-pink-500">Projects</a>
+          <a href="#experience" className="hover:text-pink-500">Experience</a>
+          <a href="#contact" className="hover:text-pink-500">Contact</a>
         </div>
       </nav>
 
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="bg-[#e8dfd4] rounded-[40px] p-10 relative overflow-hidden">
+        <div className="bg-[#e8dfd4] rounded-[40px] p-10 grid md:grid-cols-2 items-center gap-10 relative overflow-hidden">
 
-          {/* GIRL ILLUSTRATION */}
-          <img
-            src="/girl.png"
-            alt="illustration"
-            className="absolute right-20 top-0 w-80 opacity-50 pointer-events-none"
-          />
+          {/* LEFT SIDE */}
+          <div>
 
-          <p className="text-sm italic mb-2">hi, see you here :)</p>
+            <p className="text-sm italic mb-2">hi, see you here :)</p>
 
-          <h1 className="text-[90px] md:text-[130px] font-extrabold leading-[0.85] text-pink-500 opacity-90">
-            SEONA
-          </h1>
+            <h1 className="text-[80px] md:text-[110px] font-extrabold leading-[0.85] text-pink-500">
+              SEONA
+            </h1>
 
-          <h2 className="text-[40px] md:text-[60px] font-semibold -mt-6">
-            Ann Tom
-          </h2>
+            <h2 className="text-[35px] md:text-[50px] font-semibold -mt-6">
+              Ann Tom
+            </h2>
 
-          <p className="mt-6 max-w-md text-lg">
-            Building technology for impact, community and sustainable
-            development.
-          </p>
+            <p className="mt-6 max-w-md text-lg">
+              Building technology for impact, community and sustainable
+              development.
+            </p>
 
-          <div className="mt-8 flex gap-4">
-            <button className="px-6 py-3 bg-pink-500 text-white rounded-full shadow">
-              View Work
-            </button>
+            <div className="mt-8 flex gap-4">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition"
+              >
+                View Work
+              </a>
 
-            <button className="px-6 py-3 border rounded-full">
-              Resume
-            </button>
-          </div>
-
-          {/* POLAROID PHOTO */}
-          <motion.div
-            whileHover={{ rotate: 0, scale: 1.05 }}
-            className="absolute right-12 bottom-4 rotate-3 bg-white p-3 shadow-2xl rounded-md"
-          >
-
-            <div className="w-32 h-44 overflow-hidden rounded-sm">
-              <img
-                src="/seona.jpg"
-                alt="Seona"
-                className="w-full h-full object-cover"
-              />
+              <Link
+                to="/resume"
+                className="px-6 py-3 border rounded-full hover:bg-gray-100 transition"
+              >
+                Resume
+              </Link>
             </div>
 
-            <p className="text-xs mt-2 text-center">hello :)</p>
+          </div>
 
-          </motion.div>
+
+          {/* RIGHT SIDE */}
+          <div className="flex justify-center relative">
+
+            {/* GIRL IMAGE */}
+            <img
+              src="/girl.png"
+              alt="illustration"
+              className="absolute -top-10 w-72 opacity-40"
+            />
+
+            {/* POLAROID */}
+            <motion.div
+              whileHover={{ rotate: 0, scale: 1.07 }}
+              className="rotate-3 bg-white p-3 shadow-2xl rounded-md"
+            >
+
+              <div className="w-40 h-52 overflow-hidden rounded-sm">
+                <img
+                  src="/seona.jpg"
+                  alt="Seona"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <p className="text-xs mt-2 text-center">hello :)</p>
+
+            </motion.div>
+
+          </div>
 
         </div>
       </section>
@@ -146,28 +164,46 @@ export default function Home() {
 
         <div className="grid md:grid-cols-4 gap-6">
 
-          <div className="bg-white p-6 rounded-xl shadow rotate-[-1deg]">
+          <Link
+            to="/tinkerhub"
+            className="bg-white p-6 rounded-xl shadow rotate-[-1deg] block 
+            transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl"
+          >
             <h3 className="font-semibold">TinkerHub</h3>
             <p className="text-sm mt-2">
               Community leadership and learning initiatives.
             </p>
-          </div>
+          </Link>
 
-          <div className="bg-[#e9d5ff] p-6 rounded-xl shadow rotate-2">
+
+          <Link
+            to="/ecocee"
+            className="bg-[#e9d5ff] p-6 rounded-xl shadow rotate-2 block 
+            transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl"
+          >
             <h3 className="font-semibold">Ecocee</h3>
             <p className="text-sm mt-2">
               Startup marketing internship.
             </p>
-          </div>
+          </Link>
 
-          <div className="bg-white p-6 rounded-xl shadow rotate-1">
+
+          <Link
+            to="/hackathons"
+            className="bg-white p-6 rounded-xl shadow rotate-1 block 
+            transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl"
+          >
             <h3 className="font-semibold">Hackathons</h3>
             <p className="text-sm mt-2">
               Projects and innovation events.
             </p>
-          </div>
+          </Link>
 
-          <div className="bg-[#fce7f3] p-6 rounded-xl shadow rotate-[-2deg]">
+
+          <div
+            className="bg-[#fce7f3] p-6 rounded-xl shadow rotate-[-2deg]
+            transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl"
+          >
             <h3 className="font-semibold">GHCI 2025</h3>
             <p className="text-sm mt-2">
               Attended Grace Hopper Celebration India 2025.
@@ -199,6 +235,7 @@ export default function Home() {
               React • Firebase • IoT
             </p>
           </div>
+
 
           <div className="bg-white p-6 rounded-xl shadow rotate-1">
             <h3 className="text-lg font-semibold">future project</h3>

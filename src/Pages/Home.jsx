@@ -1,10 +1,31 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FiCode, FiTerminal, FiAward } from "react-icons/fi";
 
 const card = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
+
+// 📝 EASILY ADD YOUR PROJECTS HERE for the Home Page
+const selectedProjects = [
+  {
+    id: 1,
+    name: "Smart Energy Tracker",
+    description: "Real-time electricity monitoring dashboard with carbon impact visualisation.",
+    techStack: ["React", "Tailwind", "Firebase"],
+    link: "https://github.com/seonaann",
+    status: "Completed"
+  },
+  {
+    id: 2,
+    name: "Coming Soon...",
+    description: "Another awesome project that I am currently working on. It's related to machine learning and AI.",
+    techStack: ["Python", "TensorFlow"],
+    link: "#",
+    status: "In Progress"
+  }
+];
 
 export default function Home() {
   return (
@@ -12,8 +33,12 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="min-h-screen bg-[#f3ede6] text-gray-800 font-sans overflow-x-hidden"
+      className="min-h-screen bg-[#f3ede6] text-gray-800 font-sans overflow-x-hidden relative"
     >
+      {/* Background Decorative Orbs */}
+      <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-pink-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-rose-200/30 rounded-full blur-[150px] pointer-events-none z-0"></div>
+      <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-pink-300/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
       {/* NAVBAR */}
       <motion.nav
@@ -50,7 +75,10 @@ export default function Home() {
               hi, see you here :)
             </motion.p>
 
-            <motion.h1 variants={card} className="text-[80px] md:text-[110px] font-extrabold leading-[0.85] text-pink-500">
+            <motion.h1
+              variants={card}
+              className="text-[80px] md:text-[110px] font-extrabold leading-[0.85] text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 drop-shadow-sm"
+            >
               SEONA
             </motion.h1>
 
@@ -59,17 +87,29 @@ export default function Home() {
             </motion.h2>
 
             <motion.p variants={card} className="mt-6 max-w-md text-lg">
-              Between code, community, and curiosity
+              i build, i learn, i figure things out
             </motion.p>
 
             <motion.div variants={card} className="mt-8 flex gap-4">
-              <a href="#projects" className="px-6 py-3 bg-pink-500 text-white rounded-full shadow hover:scale-105 transition">
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-pink-500 text-white rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2"
+              >
                 View Work
-              </a>
+              </motion.a>
 
-              <a href="#" className="px-6 py-3 border rounded-full hover:bg-gray-100 transition">
-                Resume
-              </a>
+              <motion.a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 border border-pink-300 text-pink-600 rounded-full hover:bg-pink-50 transition flex items-center gap-2"
+              >
+                Resume 🎀
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -85,18 +125,30 @@ export default function Home() {
             />
 
             <motion.div
-              whileHover={{
-                scale: 1.15,
-                rotate: 0,
-                y: -10,
-                boxShadow: "0px 25px 50px rgba(0,0,0,0.25)"
-              }}
-              className="rotate-3 bg-white p-3 shadow-xl rounded-md relative z-10"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="relative z-10"
             >
-              <div className="w-40 h-52 overflow-hidden rounded-sm">
-                <img src="/seona.jpg" alt="Seona" className="w-full h-full object-cover" />
-              </div>
-              <p className="text-xs mt-2 text-center">hello :)</p>
+              <motion.div
+                whileHover={{
+                  scale: 1.15,
+                  rotate: 0,
+                  y: -10,
+                  boxShadow: "0px 25px 50px rgba(0,0,0,0.25)"
+                }}
+                className="rotate-3 bg-white p-3 shadow-xl rounded-md cursor-pointer"
+              >
+                <div className="w-40 h-52 overflow-hidden rounded-sm">
+                  <img src="/seona.jpg" alt="Seona" className="w-full h-full object-cover" />
+                </div>
+                <motion.p
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                  className="text-xs mt-2 text-center text-pink-500 font-medium"
+                >
+                  hello :)
+                </motion.p>
+              </motion.div>
             </motion.div>
 
           </div>
@@ -111,33 +163,40 @@ export default function Home() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto px-6 py-16"
       >
-        <h2 className="text-3xl font-bold mb-10">about me</h2>
+        <h2 className="text-3xl font-bold mb-10">
+          about me
+        </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 relative z-10">
 
-          <motion.div variants={card} initial="hidden" whileInView="show"
-            className="bg-white p-6 rounded-xl shadow rotate-[-2deg] hover:rotate-0 transition">
+          <motion.div variants={card} initial="hidden" whileInView="show" whileHover={{ y: -5, scale: 1.02 }}
+            className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-[-2deg] transition cursor-default">
             <p className="text-sm">
-               CSE’27 @ VJCET <br />
-               exploring AI/ML <br />
-               building with TinkerHub
+              CSE’27 @ VJCET <br />
+              currently exploring AI & ML <br />
+              and trying to understand how things actually work<br />
+              <br />
+              i like being around people who build things,<br />
+              so i spend a lot of time in communities<br />
+              <br />
+              still learning. still building.
             </p>
           </motion.div>
 
-          <motion.div variants={card} initial="hidden" whileInView="show"
-            className="bg-[#f9d7e3] p-6 rounded-xl shadow rotate-2 hover:rotate-0 transition">
+          <motion.div variants={card} initial="hidden" whileInView="show" whileHover={{ y: -5, scale: 1.02 }}
+            className="bg-[#f9d7e3] p-6 rounded-xl shadow-sm rotate-2 transition cursor-default">
             <h3 className="font-semibold mb-2">things I like</h3>
             <ul className="text-sm space-y-1">
               <li>AI & machine learning</li>
               <li>sustainable development</li>
-              <li>design + technology</li>
-              <li>community building</li>
+              <li>building things that make sense</li>
+              <li>communities that help you grow</li>
               <li>hackathons</li>
             </ul>
           </motion.div>
 
-          <motion.div variants={card} initial="hidden" whileInView="show"
-            className="bg-white p-6 rounded-xl shadow rotate-1 hover:rotate-0 transition">
+          <motion.div variants={card} initial="hidden" whileInView="show" whileHover={{ y: -5, scale: 1.02 }}
+            className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-1 transition cursor-default">
             <h3 className="font-semibold mb-2">skills</h3>
             <p className="text-sm">
               React • Python • Machine Learning • Frontend Development
@@ -145,6 +204,24 @@ export default function Home() {
           </motion.div>
 
         </div>
+
+        {/* MARQUEE MOVED HERE */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 relative flex overflow-x-hidden whitespace-nowrap bg-white/60 backdrop-blur-md py-4 rounded-2xl border border-pink-100 shadow-sm z-10"
+        >
+          <motion.div 
+            animate={{ x: ["0%", "-50%"] }} 
+            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+            className="flex gap-8 font-mono text-sm text-pink-600 px-4 items-center"
+          >
+            <span>React</span> ✦ <span>Python</span> ✦ <span>Machine Learning</span> ✦ <span>Tailwind</span> ✦ <span>UI/UX</span> ✦ <span>Firebase</span> ✦
+            <span>React</span> ✦ <span>Python</span> ✦ <span>Machine Learning</span> ✦ <span>Tailwind</span> ✦ <span>UI/UX</span> ✦ <span>Firebase</span> ✦
+          </motion.div>
+        </motion.div>
+
       </motion.section>
 
       {/* WORK */}
@@ -157,21 +234,36 @@ export default function Home() {
       >
         <h2 className="text-3xl font-bold mb-10">things i've done</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 relative z-10">
 
-          <Link to="/tinkerhub" className="bg-white p-6 rounded-xl shadow hover:scale-105 hover:-translate-y-2 transition">
-            <h3 className="font-semibold">TinkerHub</h3>
-            <p className="text-sm mt-2">Community leadership and learning initiatives.</p>
+          <Link to="/tinkerhub" className="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition overflow-hidden group border border-pink-50 flex flex-col">
+            <div className="h-32 bg-pink-50 relative w-full overflow-hidden flex items-center justify-center">
+              <FiCode className="text-6xl text-pink-400 group-hover:scale-110 transition duration-500" />
+            </div>
+            <div className="p-6 text-center md:text-left">
+              <h3 className="font-semibold text-lg">TinkerHub</h3>
+              <p className="text-sm mt-2 text-gray-600">worked on community-led learning initiatives and events</p>
+            </div>
           </Link>
 
-          <Link to="/hackathons" className="bg-white p-6 rounded-xl shadow hover:scale-105 hover:-translate-y-2 transition">
-            <h3 className="font-semibold">Hackathons</h3>
-            <p className="text-sm mt-2">Projects and innovation events.</p>
+          <Link to="/hackathons" className="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition overflow-hidden group border border-pink-50 flex flex-col">
+            <div className="h-32 bg-pink-50 relative w-full overflow-hidden flex items-center justify-center">
+              <FiTerminal className="text-6xl text-pink-400 group-hover:scale-110 transition duration-500" />
+            </div>
+            <div className="p-6 text-center md:text-left">
+              <h3 className="font-semibold text-lg">Hackathons</h3>
+              <p className="text-sm mt-2 text-gray-600">Projects and innovation events.</p>
+            </div>
           </Link>
 
-          <Link to="/ghci" className="bg-[#fce7f3] p-6 rounded-xl shadow hover:scale-105 hover:-translate-y-2 transition">
-            <h3 className="font-semibold">GHCI 2025</h3>
-            <p className="text-sm mt-2">Attended Grace Hopper Celebration India 2025.</p>
+          <Link to="/ghci" className="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-2 transition overflow-hidden group border border-pink-50 flex flex-col">
+            <div className="h-32 bg-pink-50 relative w-full overflow-hidden flex items-center justify-center">
+              <FiAward className="text-6xl text-pink-400 group-hover:scale-110 transition duration-500" />
+            </div>
+            <div className="p-6 text-center md:text-left">
+              <h3 className="font-semibold text-lg">GHCI 2025</h3>
+              <p className="text-sm mt-2 text-gray-600">Attended Grace Hopper Celebration India 2025.</p>
+            </div>
           </Link>
 
         </div>
@@ -181,18 +273,50 @@ export default function Home() {
       <motion.section id="projects" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-10">selected projects</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-xl shadow col-span-2">
-            <h3 className="text-xl font-semibold">Smart Energy Tracker</h3>
-            <p className="text-sm mt-2">
-              Real-time electricity monitoring dashboard with carbon impact visualisation.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h3 className="text-lg font-semibold">future project</h3>
-            <p className="text-sm mt-2">coming soon...</p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-6 relative z-10">
+          {selectedProjects.map((project, index) => (
+            <motion.div 
+              key={project.id}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-[32px] shadow-sm flex flex-col h-full border border-pink-50"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-2xl font-bold">{project.name}</h3>
+                <span className={`text-xs px-3 py-1 rounded-full font-medium ${
+                  project.status === "Completed" ? "bg-green-100 text-green-700" : "bg-orange-100 text-orange-700"
+                }`}>
+                  {project.status}
+                </span>
+              </div>
+              
+              <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+                {project.description}
+              </p>
+              
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.techStack.map(tech => (
+                    <span key={tech} className="bg-pink-50 text-pink-500 px-3 py-1 text-xs rounded-full font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-semibold text-gray-800 hover:text-pink-500 transition underline underline-offset-4"
+                >
+                  View Code &rarr;
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.section>
 
@@ -200,42 +324,51 @@ export default function Home() {
       <motion.section id="experience" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-8">experience</h2>
 
-        <div className="space-y-6">
+        <div className="space-y-6 relative z-10">
 
-          <div className="bg-[#f9d7e3] p-6 rounded-xl shadow rotate-1">
-            <h3 className="font-semibold">TinkerHub — Learning Coordinator</h3>
-            <p className="text-sm mt-2">
+          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-[#f9d7e3] p-6 rounded-xl shadow-sm rotate-1 transition cursor-default">
+            <h3 className="font-semibold text-lg">TinkerHub — Learning Coordinator</h3>
+            <p className="text-sm mt-2 text-gray-600">
               Organized hackathons, learning initiatives and community tech programs.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white p-6 rounded-xl shadow rotate-[-1deg]">
-            <h3 className="font-semibold">Ecocee — Marketing Intern</h3>
-            <p className="text-sm mt-2">
+          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-[-1deg] transition cursor-default">
+            <h3 className="font-semibold text-lg">Ecocee — Marketing Intern</h3>
+            <p className="text-sm mt-2 text-gray-600">
               Conducted startup research, SWOT analysis and marketing strategy.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white p-6 rounded-xl shadow rotate-1">
-            <h3 className="font-semibold">
-              AI & Data Analytics Intern – AICTE, Shell India & Edunet (Virtual, Jun–Jul 2025)
+          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-1 transition cursor-default">
+            <h3 className="font-semibold text-lg">
+              AI & Data Analytics Intern – Shell India & Edunet
             </h3>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 text-gray-600">
               4-week internship on AI/analytics applied to sustainable solutions
             </p>
-          </div>
+          </motion.div>
 
         </div>
       </motion.section>
 
       {/* CONTACT */}
       <motion.section id="contact" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center py-20">
-        <h2 className="text-3xl font-bold">let's build something ✿</h2>
+        <h2 className="text-3xl font-bold flex justify-center items-center gap-3">
+          let's build something
+          <motion.span
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+            className="inline-block text-pink-500"
+          >
+            ✿
+          </motion.span>
+        </h2>
 
-        <div className="flex justify-center gap-6 mt-6">
-          <button className="px-6 py-3 bg-pink-500 text-white rounded-full shadow">Email</button>
-          <button className="px-6 py-3 border rounded-full">GitHub</button>
-          <button className="px-6 py-3 border rounded-full">LinkedIn</button>
+        <div className="flex justify-center gap-6 mt-8">
+          <motion.a href="mailto:seonaanntom9@gmail.com" whileHover={{ scale: 1.1, rotate: -3 }} whileTap={{ scale: 0.9 }} className="px-6 py-3 bg-pink-500 text-white rounded-full shadow-lg inline-block">Email</motion.a>
+          <motion.a href="https://github.com/seonaann" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1, rotate: 3 }} whileTap={{ scale: 0.9 }} className="px-6 py-3 border border-pink-300 text-pink-600 rounded-full hover:bg-pink-50 inline-block">GitHub</motion.a>
+          <motion.a href="https://www.linkedin.com/in/seona-ann-tom/" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1, rotate: -3 }} whileTap={{ scale: 0.9 }} className="px-6 py-3 border border-pink-300 text-pink-600 rounded-full hover:bg-pink-50 inline-block">LinkedIn</motion.a>
         </div>
 
         <p className="text-xs mt-10 text-gray-500">

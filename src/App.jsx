@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import TinkerHub from "./Pages/TinkerHub";
 import Hackathons from "./Pages/Hackathons";
 import GHCI from "./Pages/GHCI";
+import Projects from "./Pages/Projects";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function AnimatedRoutes() {
         <Route path="/tinkerhub" element={<TinkerHub />} />
         <Route path="/hackathons" element={<Hackathons />} />
         <Route path="/ghci" element={<GHCI />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </AnimatePresence>
   );

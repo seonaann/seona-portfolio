@@ -11,84 +11,121 @@ export default function GHCI() {
     >
       <div className="max-w-4xl mx-auto py-10">
 
-        {/* Back Button */}
-        <Link to="/" className="inline-flex items-center gap-2 text-pink-500 hover:text-pink-600 font-medium mb-10 hover:-translate-x-1 transition-transform">
+        <Link to="/" className="inline-flex items-center gap-2 text-pink-500 hover:text-pink-600 font-medium mb-8 hover:-translate-x-1 transition-transform">
           <span>&larr;</span> Back to Home
         </Link>
 
-        {/* Header Section */}
+        <motion.h1 
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-extrabold mb-12 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 drop-shadow-sm leading-tight"
+        >
+          Stepping Into GHC India 2025
+        </motion.h1>
+
+        {/* Gallery Section */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm relative overflow-hidden"
+          className="mb-12 mt-10"
         >
-          {/* Background blurred splash */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-pink-100 rounded-full blur-3xl -mr-20 -mt-20 opacity-60"></div>
+          <h2 className="text-3xl font-extrabold mb-4 text-gray-800 px-2 flex items-center gap-2 drop-shadow-sm">
+            Moments from GHCI
+            <motion.span animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>📸</motion.span>
+          </h2>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 relative z-10 w-fit drop-shadow-sm">
-            Grace Hopper Celebration India 2025
-          </h1>
-
-          <p className="max-w-2xl text-lg leading-relaxed text-gray-600 mb-10 relative z-10">
-            Attended GHCI 2025, one of the largest gatherings for women in tech.
-            Explored opportunities in AI, networked with industry leaders,
-            and gained insights into the future of technology.
+          <p className="text-base text-gray-500 px-2 mb-6 font-medium italic">
+            chaos, conversations, learning, and a little bit of magic
           </p>
 
-          {/* Highlights Mini-Cards */}
-          <div className="grid md:grid-cols-3 gap-6 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
 
-            <motion.div
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-[#fcf8f5] p-6 rounded-2xl border border-pink-50 shadow-sm"
-            >
-              <div className="text-3xl mb-4">✨</div>
-              <h3 className="font-semibold text-lg mb-2">Networking</h3>
-              <p className="text-sm text-gray-600">Connected with brilliant professionals and tech leaders.</p>
-            </motion.div>
+            <motion.img 
+              src="/ghci1.jpg" 
+              alt="GHCI Highlight" 
+              whileHover={{ scale: 1.02 }} 
+              className="col-span-2 row-span-2 bg-[#e8dfd4] rounded-[32px] h-80 w-full object-cover shadow-sm border border-pink-100 cursor-pointer"
+            />
 
-            <motion.div
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-[#f9d7e3] p-6 rounded-2xl border border-pink-100 shadow-sm rotate-1"
-            >
-              <div className="text-3xl mb-4">🚀</div>
-              <h3 className="font-semibold text-lg mb-2">Tech Talks</h3>
-              <p className="text-sm text-gray-700">Participated in engaging workshops and sessions.</p>
-            </motion.div>
+            <motion.img 
+              src="/ghci2.jpeg" 
+              alt="Booths and Swags" 
+              whileHover={{ scale: 1.02 }} 
+              className="bg-[#e8dfd4] rounded-[32px] h-40 w-full object-cover shadow-sm border border-pink-100 cursor-pointer"
+            />
 
-            <motion.div
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-[#fcf8f5] p-6 rounded-2xl border border-pink-50 shadow-sm"
-            >
-              <div className="text-3xl mb-4">💡</div>
-              <h3 className="font-semibold text-lg mb-2">Innovation</h3>
-              <p className="text-sm text-gray-600">Explored the latest trends in AI and sustainable tech.</p>
-            </motion.div>
+            <motion.img 
+              src="/ghci3.jpeg" 
+              alt="Sessions and Vibes" 
+              whileHover={{ scale: 1.02 }} 
+              className="bg-[#e8dfd4] rounded-[32px] h-36 mt-4 w-full object-cover shadow-sm border border-pink-100 cursor-pointer"
+            />
 
           </div>
         </motion.div>
 
-        {/* Placeholder for images */}
+        {/* Main Story Card */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8 grid md:grid-cols-2 gap-6"
+          className="bg-white rounded-[40px] p-8 md:p-14 shadow-sm relative overflow-hidden mb-10"
         >
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            className="bg-[#e8dfd4] h-72 rounded-[40px] flex items-center justify-center border-2 border-dashed border-pink-200 text-gray-500 hover:bg-[#e2d8cd] transition cursor-pointer"
-          >
-            <p className="text-sm rounded-full bg-white px-4 py-2 opacity-80 shadow-sm">📸 Add a photo here!</p>
-          </motion.div>
+          <div className="absolute top-0 right-0 w-80 h-80 bg-pink-100 rounded-full blur-3xl -mr-20 -mt-20 opacity-50"></div>
 
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            className="bg-[#e8dfd4] h-72 rounded-[40px] flex items-center justify-center border-2 border-dashed border-pink-200 text-gray-500 hover:bg-[#e2d8cd] transition cursor-pointer"
-          >
-            <p className="text-sm rounded-full bg-white px-4 py-2 opacity-80 shadow-sm">📸 Add another photo here!</p>
-          </motion.div>
+          <div className="prose prose-lg text-gray-600 relative z-10 space-y-6">
+
+            <p className="text-xl leading-relaxed font-medium italic text-gray-500 border-l-4 border-pink-300 pl-6">
+              “You’ve been selected.” — and just like that, everything shifted.
+            </p>
+
+            <p>
+              What followed were three days that completely changed how I see tech, community, and my own journey — all thanks to a scholarship from TinkerHub.
+            </p>
+
+            <p>
+              I walked in with curiosity and quiet dreams, and walked out with clarity, confidence, inspiration, and a circle of people who made it unforgettable.
+            </p>
+
+            <p>
+              Some sessions genuinely reframed my thinking.
+            </p>
+
+            <p>
+              The talk on Hybrid ML-Driven Threat Intelligence showed how ML and rule-based systems come together to secure real repositories with clean, scalable architectures.
+            </p>
+
+            <p>
+              The masterclass on AI and Cybersecurity as a Double-Edged Sword felt like a wake-up call — from prompt poisoning and pixel attacks to AI vs AI and the importance of human-AI collaboration.
+            </p>
+
+            <p>
+              In Behind the Scenes of Smart Shopping, I saw how GenAI, LLMs, metadata, and contrastive learning come together to build hyper-personalized systems while dealing with uncertainty.
+            </p>
+
+            <p>
+              One of the most grounding moments was a panel on Business Transformation with GenAI — where AI was described not as magic, but like electricity. Its power lies in how we use it, where we apply it, and why it matters.
+            </p>
+
+            <p>
+              And beyond sessions, it was the small moments — fun quizzes, random conversations, walking through company booths, collecting swags, and unexpected interactions — that made everything feel alive.
+            </p>
+
+            <p>
+              But the most beautiful part? Being in a space filled with women who were smart, kind, ambitious, creative, and unapologetically dreaming big.
+            </p>
+
+            <p>
+              Somewhere between tech, learning, and laughter, I didn’t just explore AI, cybersecurity, and GenAI — I found direction, belief, responsibility, and possibility.
+            </p>
+
+            <p className="italic text-gray-500">
+              not just attended… i belonged 🌸
+            </p>
+
+          </div>
         </motion.div>
 
       </div>

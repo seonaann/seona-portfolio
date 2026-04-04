@@ -12,18 +12,10 @@ const selectedProjects = [
   {
     id: 1,
     name: "Smart Energy Tracker",
-    description: "Real-time electricity monitoring dashboard with carbon impact visualisation.",
-    techStack: ["React", "Tailwind", "Firebase"],
+    description: "Built an IoT-based energy tracker using ESP32 to monitor real-time usage, push data to Firebase, and visualize consumption patterns and costs through a dashboard.",
+    techStack: ["Arduino", "ESP32", "Firebase", "React", "Tailwind CSS"],
     link: "https://github.com/seonaann",
     status: "Completed"
-  },
-  {
-    id: 2,
-    name: "Coming Soon...",
-    description: "Another awesome project that I am currently working on. It's related to machine learning and AI.",
-    techStack: ["Python", "TensorFlow"],
-    link: "#",
-    status: "In Progress"
   }
 ];
 
@@ -82,7 +74,7 @@ export default function Home() {
               SEONA
             </motion.h1>
 
-            <motion.h2 variants={card} className="text-[35px] md:text-[50px] font-semibold -mt-6">
+            <motion.h2 variants={card} className="text-[35px] md:text-[50px] font-semibold -mt-1 uppercase text-gray-700">
               Ann Tom
             </motion.h2>
 
@@ -172,14 +164,13 @@ export default function Home() {
           <motion.div variants={card} initial="hidden" whileInView="show" whileHover={{ y: -5, scale: 1.02 }}
             className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-[-2deg] transition cursor-default">
             <p className="text-sm">
+              <h3 className="font-semibold mb-2">about me</h3>
               CSE’27 @ VJCET <br />
               currently exploring AI & ML <br />
               and trying to understand how things actually work<br />
               <br />
               i like being around people who build things,<br />
               so i spend a lot of time in communities<br />
-              <br />
-              still learning. still building.
             </p>
           </motion.div>
 
@@ -206,14 +197,14 @@ export default function Home() {
         </div>
 
         {/* MARQUEE MOVED HERE */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-12 relative flex overflow-x-hidden whitespace-nowrap bg-white/60 backdrop-blur-md py-4 rounded-2xl border border-pink-100 shadow-sm z-10"
         >
-          <motion.div 
-            animate={{ x: ["0%", "-50%"] }} 
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
             className="flex gap-8 font-mono text-sm text-pink-600 px-4 items-center"
           >
@@ -275,7 +266,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-6 relative z-10">
           {selectedProjects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={project.id}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -286,17 +277,16 @@ export default function Home() {
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-2xl font-bold">{project.name}</h3>
-                <span className={`text-xs px-3 py-1 rounded-full font-medium ${
-                  project.status === "Completed" ? "bg-green-100 text-green-700" : "bg-orange-100 text-orange-700"
-                }`}>
+                <span className={`text-xs px-3 py-1 rounded-full font-medium ${project.status === "Completed" ? "bg-green-100 text-green-700" : "bg-orange-100 text-orange-700"
+                  }`}>
                   {project.status}
                 </span>
               </div>
-              
+
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
                 {project.description}
               </p>
-              
+
               <div className="mt-auto">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map(tech => (
@@ -305,10 +295,10 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                
-                <a 
-                  href={project.link} 
-                  target="_blank" 
+
+                <a
+                  href={project.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-sm font-semibold text-gray-800 hover:text-pink-500 transition underline underline-offset-4"
                 >
@@ -325,30 +315,58 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8">experience</h2>
 
         <div className="space-y-6 relative z-10">
-
-          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-[#f9d7e3] p-6 rounded-xl shadow-sm rotate-1 transition cursor-default">
-            <h3 className="font-semibold text-lg">TinkerHub — Learning Coordinator</h3>
-            <p className="text-sm mt-2 text-gray-600">
+          {/* TinkerHub */}
+          <motion.div whileHover={{ scale: 1.01, y: -2 }} className="bg-white p-6 md:p-8 rounded-[32px] shadow-sm border border-pink-50 transition border-l-[6px] border-l-pink-400">
+            <div className="flex justify-between items-start flex-col md:flex-row md:items-center mb-4 gap-2">
+              <div>
+                <h3 className="font-extrabold text-xl text-gray-800">Learning Coordinator</h3>
+                <p className="text-pink-500 font-semibold mt-1">TinkerHub <span className="text-gray-400 font-normal ml-1 border-l pl-2 ml-2 border-pink-200">Full-time</span></p>
+              </div>
+              <div className="text-sm font-medium text-gray-500 bg-pink-50/50 px-3 py-1 rounded-full border border-pink-100">
+                Jul 2025 - Present • 10 mos
+              </div>
+            </div>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Organized hackathons, learning initiatives and community tech programs.
             </p>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-[-1deg] transition cursor-default">
-            <h3 className="font-semibold text-lg">Ecocee — Marketing Intern</h3>
-            <p className="text-sm mt-2 text-gray-600">
-              Conducted startup research, SWOT analysis and marketing strategy.
+          {/* Ecocee */}
+          <motion.div whileHover={{ scale: 1.01, y: -2 }} className="bg-white p-6 md:p-8 rounded-[32px] shadow-sm border border-pink-50 transition border-l-[6px] border-l-pink-300">
+            <div className="flex justify-between items-start flex-col md:flex-row md:items-center mb-4 gap-2">
+              <div>
+                <h3 className="font-extrabold text-xl text-gray-800">Marketing Lead</h3>
+                <p className="text-pink-500 font-semibold mt-1">Ecocee <span className="text-gray-400 font-normal ml-1 border-l pl-2 ml-2 border-pink-200">Internship</span></p>
+              </div>
+              <div className="text-sm font-medium text-gray-500 bg-pink-50/50 px-3 py-1 rounded-full border border-pink-100">
+                Sep 2025 - Oct 2025 • 2 mos
+              </div>
+            </div>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              Conducted startup research, SWOT analysis, and marketing strategy.
             </p>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.02, rotate: 0 }} className="bg-white p-6 rounded-xl shadow-sm border border-pink-50 rotate-1 transition cursor-default">
-            <h3 className="font-semibold text-lg">
-              AI & Data Analytics Intern – Shell India & Edunet
-            </h3>
-            <p className="text-sm mt-2 text-gray-600">
-              4-week internship on AI/analytics applied to sustainable solutions
+          {/* Shell */}
+          <motion.div whileHover={{ scale: 1.01, y: -2 }} className="bg-white p-6 md:p-8 rounded-[32px] shadow-sm border border-pink-50 transition border-l-[6px] border-l-rose-300">
+            <div className="flex justify-between items-start flex-col md:flex-row md:items-center mb-4 gap-2">
+              <div>
+                <h3 className="font-extrabold text-xl text-gray-800">AI & Data Analytics Intern (Green Skills)</h3>
+                <p className="text-pink-500 font-semibold mt-1">Shell <span className="text-gray-400 font-normal ml-1 border-l pl-2 ml-2 border-pink-200">Internship</span> <span className="text-gray-400 font-normal ml-1 border-l pl-2 ml-2 border-pink-200">Remote</span></p>
+              </div>
+              <div className="text-sm font-medium text-gray-500 bg-rose-50/50 px-3 py-1 rounded-full border border-rose-100">
+                Jun 2025 - Jul 2025 • 2 mos
+              </div>
+            </div>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-4 font-medium">
+              Worked as an AI & Data Analytics Intern under the AICTE x Shell x Edunet Foundation Skills4Future program.
             </p>
+            <ul className="list-disc list-outside ml-5 text-gray-600 text-sm md:text-base space-y-2 marker:text-pink-400">
+              <li>Explored AI, Data Analytics, and Green Skills through hands-on tasks and mentorship.</li>
+              <li>Applied transfer learning, data augmentation, and class balancing to improve model accuracy.</li>
+              <li>Deployed the solution with Gradio on Hugging Face Spaces, achieving 92.9% accuracy.</li>
+            </ul>
           </motion.div>
-
         </div>
       </motion.section>
 

@@ -1,6 +1,22 @@
 export const experiences = [
   {
     id: 1,
+    role: "Backend Developer Intern (Conversational AI)",
+    company: "Repatria",
+    type: "Internship",
+    period: "Apr 2026 - Present",
+    tagline: "Hyperlocal runner service conversational AI platform",
+    bullets: [
+      "Developed a conversational AI chatbot for a hyperlocal runner service platform using Node.js and Gemini AI.",
+      "Designed state-based conversation workflows for request creation, modification, review, and confirmation.",
+      "Implemented intent detection, entity extraction, and request management APIs.",
+      "Collaborated on Flutter frontend integration and maps-based location workflows.",
+      "Improved chatbot reliability through prompt engineering, state management, and error-handling mechanisms."
+    ],
+    accentColor: "border-pink-500 text-pink-600 bg-pink-50"
+  },
+  {
+    id: 2,
     role: "Learning Coordinator",
     company: "TinkerHub",
     type: "Community Leadership",
@@ -14,7 +30,7 @@ export const experiences = [
     accentColor: "border-pink-400 text-pink-600 bg-pink-50"
   },
   {
-    id: 2,
+    id: 3,
     role: "Marketing Lead Intern",
     company: "Ecocee",
     type: "Internship",
@@ -27,7 +43,7 @@ export const experiences = [
     accentColor: "border-pink-300 text-pink-500 bg-pink-50/70"
   },
   {
-    id: 3,
+    id: 4,
     role: "AI & Data Analytics Intern (Green Skills)",
     company: "Shell",
     type: "Internship • Remote",

@@ -73,14 +73,14 @@ export default function Projects() {
                 </div>
 
                 {/* Description */}
-                <p className="font-mono text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   {project.description}
                 </p>
               </div>
 
               {/* Card Footer: Tech Stack & Action Links */}
               <div>
-                <div className="flex flex-wrap gap-2 mb-6 font-mono">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}

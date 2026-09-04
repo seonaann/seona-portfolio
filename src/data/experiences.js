@@ -4,7 +4,7 @@ export const experiences = [
     role: "Learning Coordinator",
     company: "TinkerHub",
     type: "Community Leadership",
-    period: "Jul 2025 - Present",
+    period: "Jul 2025 - Jul 2026",
     tagline: "Empowering 500+ student learners through peer tech culture",
     bullets: [
       "Led community-driven study jams, beginner tech cohorts, and hands-on workshops at TinkerHub VJCET.",

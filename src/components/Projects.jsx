@@ -17,8 +17,8 @@ export default function Projects() {
           <h2 className="text-3xl font-extrabold text-gray-800 tracking-tight">
             selected projects
           </h2>
-          <p className="font-mono text-xs sm:text-sm text-pink-600 mt-1.5 flex items-center gap-1.5">
-            <span className="text-pink-400 font-bold">//</span> Featured work spanning IoT systems, applied machine learning, and civic tech
+          <p className="text-sm text-gray-500 mt-1">
+            Featured work spanning IoT systems, applied machine learning, and civic tech
           </p>
         </div>
         <a
@@ -73,14 +73,14 @@ export default function Projects() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="font-mono text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
                   {project.description}
                 </p>
               </div>
 
               {/* Card Footer: Tech Stack & Action Links */}
               <div>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 font-mono">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}

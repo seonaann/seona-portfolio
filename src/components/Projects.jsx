@@ -17,8 +17,8 @@ export default function Projects() {
           <h2 className="text-3xl font-extrabold text-gray-800 tracking-tight">
             selected projects
           </h2>
-          <p className="text-sm text-gray-500 mt-1">
-            Featured work spanning IoT systems, applied machine learning, and civic tech
+          <p className="font-mono text-xs sm:text-sm text-pink-600 mt-1.5 flex items-center gap-1.5">
+            <span className="text-pink-400 font-bold">//</span> Featured work spanning IoT systems, applied machine learning, and civic tech
           </p>
         </div>
         <a

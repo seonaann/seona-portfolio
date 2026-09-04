@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./Pages/Home";
 import TinkerHub from "./Pages/TinkerHub";
 import Hackathons from "./Pages/Hackathons";
@@ -25,6 +25,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AnimatedRoutes />
     </BrowserRouter>
   );

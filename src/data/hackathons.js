@@ -34,7 +34,7 @@ export const hackathonsList = [
   },
   {
     id: 4,
-    name: "Useless Projects 2.0",
+    name: "Useless Projects 3.0",
     headline: "Attorney General Tab-ney Wright 🎯",
     date: "2025",
     role: "AI & Extension Developer • Potato Gang",

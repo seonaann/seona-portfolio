@@ -46,7 +46,7 @@ export const projects = [
   {
     id: 5,
     name: "Attorney General Tab-ney Wright",
-    tagline: "Useless Projects 2.0 • Potato Gang",
+    tagline: "Useless Projects 3.0 • Potato Gang",
     description: "Every tab deserves to live! A Chrome extension turning tab closing into a high-stakes courtroom trial. Local AI judge Tab-ney Wright (Ollama + Llama 3.2 & FastAPI) puts you on trial to defend your tab's right to live. Guilty verdicts resurrect the tab & lockout Chrome, complete with automated PDF court affidavits via ReportLab.",
     techStack: ["Python", "FastAPI", "Ollama", "Llama 3.2", "Chrome Extension", "ReportLab", "JavaScript"],
     badge: "AI Courtroom ⚖️",

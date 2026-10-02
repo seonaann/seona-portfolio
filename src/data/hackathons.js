@@ -31,5 +31,16 @@ export const hackathonsList = [
     icon: "💜",
     badge: "100% Shipped Rate 🚀",
     link: "https://www.linkedin.com/posts/seona-ann-tom_tinkerhub-tinkherhack-womenintech-activity-7442218101708058624-674P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMDgYsBYqNUidbG36hx-3Ix-HO2B_N2-LY"
+  },
+  {
+    id: 4,
+    name: "Useless Projects 2.0",
+    headline: "Attorney General Tab-ney Wright 🎯",
+    date: "2025",
+    role: "AI & Extension Developer • Potato Gang",
+    description: "Every tab deserves to live! Built a retro courtroom Chrome extension where local AI judge Tab-ney Wright (Ollama + Llama 3.2 3B & FastAPI) puts you on trial whenever you try closing a tab.\n\nTeam Potato Gang: Seona Ann Tom & Arfan V Anulal (VJCET)\n\n• Problem: Billions of innocent Chrome tabs are mercilessly shut down daily without due process.\n• Solution: Plead your case to the AI judge! If guilty, the murdered tab is resurrected & Chrome locks for 30 mins to reflect on your actions. Generates an automated PDF court affidavit via ReportLab documenting your trial.",
+    icon: "⚖️",
+    badge: "AI Courtroom 👨‍⚖️",
+    link: "https://github.com/ArfanAnulal/Attorney-General-Tab-ney-Wright"
   }
 ];

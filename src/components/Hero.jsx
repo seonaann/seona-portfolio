@@ -51,7 +51,7 @@ export default function Hero() {
             variants={cardVariant}
             className="mt-4 text-base sm:text-lg text-gray-700 font-medium leading-relaxed max-w-lg"
           >
-            I build, I learn, I figure things out. Exploring AI & machine learning, crafting playful software, and nurturing builder communities.
+            Computer Science undergraduate specializing in backend development, REST APIs, and system integration. Building robust systems with Node.js, PostgreSQL, and conversational AI.
           </motion.p>
 
           {/* Quick Credential Badges */}
@@ -60,10 +60,10 @@ export default function Hero() {
               <FiAward className="text-amber-500" /> SAP Hackfest Nationals
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 text-gray-700 border border-pink-200/70 font-medium shadow-sm">
-              <FiUsers className="text-pink-500" /> TinkerHub Coordinator
+              <FiCompass className="text-rose-500" /> GHCI '25 Scholar
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 text-gray-700 border border-pink-200/70 font-medium shadow-sm">
-              <FiCompass className="text-rose-500" /> GHCI '25 Scholar
+              <FiUsers className="text-pink-500" /> TinkerHub Coordinator
             </span>
           </motion.div>
 

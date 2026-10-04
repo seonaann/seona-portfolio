@@ -7,8 +7,8 @@ const cardVariant = {
 };
 
 const skillList = [
-  "Python", "React", "Machine Learning", "PyTorch", "Tailwind CSS",
-  "Computer Vision", "Firebase", "ESP32 / IoT", "UI/UX Design", "Gradio"
+  "Node.js", "Express.js", "PostgreSQL", "Prisma", "Python", "Java",
+  "JavaScript", "REST APIs", "AWS ECS", "Flutter", "Firebase", "TensorFlow", "Tailwind CSS"
 ];
 
 export default function About() {
@@ -45,15 +45,15 @@ export default function About() {
             </div>
             <h3 className="font-bold text-gray-800 text-lg mb-3">About Me</h3>
             <div className="text-sm text-gray-600 space-y-2 leading-relaxed">
-              <p className="font-medium text-gray-800">CSE '27 @ VJCET</p>
-              <p>Currently exploring AI & ML and trying to understand how complex systems actually tick under the hood.</p>
+              <p className="font-medium text-gray-800">B.Tech CSE '27 @ VJCET • CGPA: 9.02</p>
+              <p>Backend & integration developer experienced with Node.js, Express, PostgreSQL, Prisma, and conversational AI workflows.</p>
               <p className="text-gray-500 italic pt-1">
-                "I like being around people who build things, so I spend a lot of time in community spaces."
+                "Strong foundation in SQL, DBMS, and software engineering with a passion for building robust backends and empowering builder communities."
               </p>
             </div>
           </div>
           <div className="mt-6 pt-4 border-t border-pink-50 text-xs text-pink-500 font-semibold flex items-center gap-1.5">
-            <FiStar className="w-3.5 h-3.5" /> Learner • Community Spirit
+            <FiStar className="w-3.5 h-3.5" /> Backend • Integration • Community
           </div>
         </motion.div>
 
@@ -73,19 +73,19 @@ export default function About() {
             <h3 className="font-bold text-gray-800 text-lg mb-3">Things I Like</h3>
             <ul className="text-sm text-gray-700 space-y-2.5 font-medium">
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> AI & machine learning
+                <span className="text-pink-600 text-xs">✦</span> Backend systems & REST APIs
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-pink-600 text-xs">✦</span> Conversational AI & API integration
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-pink-600 text-xs">✦</span> Sustainable & civic innovation
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Building things that make sense
-              </li>
-              <li className="flex items-center gap-2">
                 <span className="text-pink-600 text-xs">✦</span> High-energy hackathons
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Inclusive builder spaces
+                <span className="text-pink-600 text-xs">✦</span> Peer learning & community leadership
               </li>
             </ul>
           </div>
@@ -109,10 +109,10 @@ export default function About() {
             </div>
             <h3 className="font-bold text-gray-800 text-lg mb-3">Core Stack</h3>
             <p className="text-xs text-gray-500 mb-4">
-              Technologies I reach for when turning concepts into working prototypes:
+              Technologies and tools I reach for when engineering scalable backends and applications:
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Python", "React", "PyTorch", "Machine Learning", "Tailwind CSS", "Firebase", "ESP32"].map((tech) => (
+              {["Node.js", "Express.js", "PostgreSQL", "Prisma", "Python", "Java", "REST APIs", "AWS ECS", "Flutter", "Firebase"].map((tech) => (
                 <span
                   key={tech}
                   className="px-2.5 py-1 rounded-full text-xs font-semibold bg-pink-50 text-pink-700 border border-pink-100"

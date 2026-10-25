@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiArrowLeft, FiAward, FiStar, FiCamera, FiMaximize2 } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LightboxModal from "../components/LightboxModal";
@@ -79,6 +79,45 @@ export default function TinkerHub() {
             <p>
               And then there were moments like Useless Projects, where I got to switch sides and just build. I collaborated with Arfan, our campus lead, and we ended up creating something completely ridiculous, an app that predicts whether a coconut might fall on your head. It made absolutely no sense. Which is exactly why it worked.
             </p>
+
+            {/* We Won 2 Awards */}
+            <div className="pt-4 border-t border-pink-100">
+              <div className="grid sm:grid-cols-2 gap-4 my-2">
+                <div className="bg-amber-50/70 p-4 rounded-2xl border border-amber-200/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center shrink-0">
+                    <FiAward className="w-5 h-5 text-amber-700" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">
+                      April Milestone
+                    </span>
+                    <h4 className="font-bold text-gray-800 text-sm sm:text-base mt-0.5">
+                      Campus of the Month
+                    </h4>
+                    <p className="text-xs text-gray-500">
+                      Named by the TinkerHub Foundation
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-rose-50/70 p-4 rounded-2xl border border-rose-200/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center shrink-0">
+                    <FiStar className="w-5 h-5 text-rose-600" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded-full">
+                      Graduation Honor
+                    </span>
+                    <h4 className="font-bold text-gray-800 text-sm sm:text-base mt-0.5">
+                      Best Learning Community
+                    </h4>
+                    <p className="text-xs text-gray-500">
+                      Recognized at graduation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -91,8 +130,8 @@ export default function TinkerHub() {
         >
           <div className="flex items-center justify-between px-2 mb-4">
             <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-              Memories & Events
-              <motion.span animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>📸</motion.span>
+              <span>Memories & Events</span>
+              <FiCamera className="w-5 h-5 text-pink-500" />
             </h2>
             <span className="text-xs text-pink-500 font-medium hidden sm:inline">
               click any photo to view full size
@@ -100,7 +139,7 @@ export default function TinkerHub() {
           </div>
 
           <p className="text-sm text-gray-500 px-2 mb-6">
-            ideas → chaos → somehow an event (and people actually learned something)
+            ideas &rarr; chaos &rarr; somehow an event (and people actually learned something)
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -117,8 +156,8 @@ export default function TinkerHub() {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-xs">
-                    View full image 🔍
+                  <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                    <FiMaximize2 className="w-3.5 h-3.5" /> View full image
                   </span>
                 </div>
               </motion.div>
@@ -134,8 +173,8 @@ export default function TinkerHub() {
                   className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-xs">
-                    View full image 🔍
+                  <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                    <FiMaximize2 className="w-3.5 h-3.5" /> View full image
                   </span>
                 </div>
               </motion.div>
@@ -154,8 +193,8 @@ export default function TinkerHub() {
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full">
-                    Zoom 🔍
+                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <FiMaximize2 className="w-3 h-3" /> Zoom
                   </span>
                 </div>
               </motion.div>
@@ -171,8 +210,8 @@ export default function TinkerHub() {
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full">
-                    Zoom 🔍
+                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <FiMaximize2 className="w-3 h-3" /> Zoom
                   </span>
                 </div>
               </motion.div>
@@ -188,8 +227,8 @@ export default function TinkerHub() {
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full">
-                    Zoom 🔍
+                  <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <FiMaximize2 className="w-3 h-3" /> Zoom
                   </span>
                 </div>
               </motion.div>
@@ -235,7 +274,7 @@ export default function TinkerHub() {
             </p>
 
             <p className="italic text-gray-500 font-medium">
-              still building, still figuring things out… and honestly, I don’t think I’d want it any other way 😌
+              still building, still figuring things out… and honestly, I don’t think I’d want it any other way
             </p>
           </div>
         </motion.div>

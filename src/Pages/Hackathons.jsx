@@ -1,9 +1,24 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
+import { FiArrowLeft, FiArrowUpRight, FiAward, FiCpu, FiUsers, FiTerminal } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { hackathonsList } from "../data/hackathons";
+
+const renderHackathonIcon = (type) => {
+  switch (type) {
+    case "award":
+      return <FiAward className="w-6 h-6 text-emerald-600" />;
+    case "cpu":
+      return <FiCpu className="w-6 h-6 text-rose-500" />;
+    case "users":
+      return <FiUsers className="w-6 h-6 text-purple-600" />;
+    case "terminal":
+      return <FiTerminal className="w-6 h-6 text-pink-600" />;
+    default:
+      return <FiTerminal className="w-6 h-6 text-pink-600" />;
+  }
+};
 
 export default function Hackathons() {
   return (
@@ -55,10 +70,10 @@ export default function Hackathons() {
                     <div className="flex items-center gap-3">
                       <div
                         className={`rounded-2xl flex items-center justify-center shadow-xs ${
-                          isFeatured ? "bg-pink-100 text-3xl p-4" : "bg-pink-50 text-2xl p-3"
+                          isFeatured ? "bg-pink-100 p-4" : "bg-pink-50 p-3"
                         }`}
                       >
-                        {hackathon.icon}
+                        {renderHackathonIcon(hackathon.iconType)}
                       </div>
                       {hackathon.badge && (
                         <span className="text-xs px-3 py-1 rounded-full font-bold bg-pink-100/70 text-pink-800 border border-pink-200">

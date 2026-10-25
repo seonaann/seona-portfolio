@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiMail, FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiFileText, FiCompass, FiArrowUpRight } from "react-icons/fi";
 
 export default function Contact() {
   const email = "seonaanntom9@gmail.com";
@@ -21,10 +21,10 @@ export default function Contact() {
           <span>let's build something</span>
           <motion.span
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 9, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
             className="inline-block text-pink-500"
           >
-            ✿
+            <FiCompass className="w-7 h-7" />
           </motion.span>
         </h2>
 
@@ -69,7 +69,7 @@ export default function Contact() {
             whileTap={{ scale: 0.96 }}
             className="px-6 py-3 border border-pink-300 text-pink-700 bg-white hover:bg-pink-50 rounded-full shadow-sm font-semibold text-sm inline-flex items-center gap-2 transition"
           >
-            <FiFileText className="w-4 h-4" /> Resume 🎀
+            <FiFileText className="w-4 h-4" /> <span>Resume</span> <FiArrowUpRight className="w-3.5 h-3.5 text-pink-500" />
           </motion.a>
         </div>
       </div>

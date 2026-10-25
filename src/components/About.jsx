@@ -7,8 +7,9 @@ const cardVariant = {
 };
 
 const skillList = [
-  "Node.js", "Express.js", "PostgreSQL", "Prisma", "Python", "Java",
-  "JavaScript", "REST APIs", "AWS ECS", "Flutter", "Firebase", "TensorFlow", "Tailwind CSS"
+  "Node.js", "Express.js", "PostgreSQL", "Prisma", "Python", "FastAPI",
+  "PyTorch", "DeBERTa", "Gemini API", "Java", "JavaScript", "REST APIs",
+  "AWS ECS", "Flutter", "Firebase", "TensorFlow", "Tailwind CSS"
 ];
 
 export default function About() {
@@ -73,19 +74,19 @@ export default function About() {
             <h3 className="font-bold text-gray-800 text-lg mb-3">Things I Like</h3>
             <ul className="text-sm text-gray-700 space-y-2.5 font-medium">
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Backend systems & REST APIs
+                <FiCheckCircle className="text-pink-600 w-3.5 h-3.5 shrink-0" /> Backend systems & REST APIs
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Conversational AI & API integration
+                <FiCheckCircle className="text-pink-600 w-3.5 h-3.5 shrink-0" /> Conversational AI & API integration
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Sustainable & civic innovation
+                <FiCheckCircle className="text-pink-600 w-3.5 h-3.5 shrink-0" /> Sustainable & civic innovation
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> High-energy hackathons
+                <FiCheckCircle className="text-pink-600 w-3.5 h-3.5 shrink-0" /> High-energy hackathons
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-pink-600 text-xs">✦</span> Peer learning & community leadership
+                <FiCheckCircle className="text-pink-600 w-3.5 h-3.5 shrink-0" /> Peer learning & community leadership
               </li>
             </ul>
           </div>

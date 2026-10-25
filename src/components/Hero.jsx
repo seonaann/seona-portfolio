@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowDown, FiAward, FiUsers, FiCompass } from "react-icons/fi";
+import { FiArrowDown, FiAward, FiUsers, FiCompass, FiArrowUpRight } from "react-icons/fi";
 
 const cardVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -87,7 +87,8 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-white/80 hover:bg-white text-pink-600 border border-pink-200 font-semibold rounded-full shadow-sm hover:shadow transition flex items-center gap-1.5 text-sm"
             >
-              Resume <span>🎀</span>
+              <span>Resume</span>
+              <FiArrowUpRight className="w-4 h-4" />
             </motion.a>
           </motion.div>
         </motion.div>

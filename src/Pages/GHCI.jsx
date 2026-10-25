@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiArrowLeft, FiCamera, FiMaximize2 } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LightboxModal from "../components/LightboxModal";
@@ -53,8 +53,8 @@ export default function GHCI() {
         >
           <div className="flex items-center justify-between px-2 mb-3">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 flex items-center gap-2">
-              Moments from GHCI
-              <motion.span animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>📸</motion.span>
+              <span>Moments from GHCI</span>
+              <FiCamera className="w-5 h-5 text-pink-500" />
             </h2>
             <span className="text-xs text-pink-500 font-medium hidden sm:inline">
               click any photo to view full size
@@ -78,8 +78,8 @@ export default function GHCI() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1 rounded-full backdrop-blur-xs">
-                  View full image 🔍
+                <span className="text-white text-xs font-semibold bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                  <FiMaximize2 className="w-3.5 h-3.5" /> View full image
                 </span>
               </div>
             </motion.div>
@@ -96,8 +96,8 @@ export default function GHCI() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full">
-                  Zoom 🔍
+                <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  <FiMaximize2 className="w-3 h-3" /> Zoom
                 </span>
               </div>
             </motion.div>
@@ -114,8 +114,8 @@ export default function GHCI() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full">
-                  Zoom 🔍
+                <span className="text-white text-[11px] font-medium bg-black/50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  <FiMaximize2 className="w-3 h-3" /> Zoom
                 </span>
               </div>
             </motion.div>
@@ -175,7 +175,7 @@ export default function GHCI() {
             </p>
 
             <p className="italic text-gray-500 font-medium">
-              not just attended… i belonged 🌸
+              not just attended… i belonged
             </p>
           </div>
         </motion.div>

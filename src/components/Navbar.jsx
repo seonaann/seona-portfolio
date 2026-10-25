@@ -61,7 +61,8 @@ export default function Navbar() {
             whileTap={{ scale: 0.96 }}
             className="text-xs font-semibold px-4 py-2 rounded-full border border-pink-200 text-pink-600 bg-pink-50/70 hover:bg-pink-100 transition flex items-center gap-1.5"
           >
-            Resume <span className="text-xs">🎀</span>
+            <span>Resume</span>
+            <FiArrowUpRight className="w-3.5 h-3.5" />
           </motion.a>
         </div>
 
@@ -71,9 +72,10 @@ export default function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium px-3 py-1.5 rounded-full border border-pink-200 text-pink-600 bg-pink-50/70"
+            className="text-xs font-medium px-3 py-1.5 rounded-full border border-pink-200 text-pink-600 bg-pink-50/70 inline-flex items-center gap-1"
           >
-            Resume 🎀
+            <span>Resume</span>
+            <FiArrowUpRight className="w-3 h-3" />
           </motion.a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

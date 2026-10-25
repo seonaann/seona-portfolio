@@ -21,11 +21,12 @@ export const experiences = [
     company: "TinkerHub",
     type: "Community Leadership",
     period: "Jul 2025 - Jul 2026",
-    tagline: "Empowering 500+ student learners through peer tech culture",
+    tagline: "Awarded Best Learning Community & Campus of the Month across Kerala",
     bullets: [
-      "Led community-driven study jams, beginner tech cohorts, and hands-on workshops at TinkerHub VJCET.",
-      "Co-organized TinkHerHack, a 2-day women-in-tech hackathon with 3 pre-hack bootcamps and 100% project shipment.",
-      "Organized and spoke at Survive ML, demystifying core machine learning concepts for beginners through interactive demos."
+      "Awarded Campus of the Month (April) and Best Learning Community at graduation for building an active maker culture.",
+      "Led community-driven study jams, beginner tech cohorts, and hands-on workshops for 500+ student learners.",
+      "Co-organized TinkHerHack 4.0, a flagship women-in-tech hackathon with 100+ applications, pre-sessions, and 100% project shipment.",
+      "Organized and co-spoke at the campus ML Study Jam, breaking down core machine learning concepts through live demos."
     ],
     accentColor: "border-pink-400 text-pink-600 bg-pink-50"
   },

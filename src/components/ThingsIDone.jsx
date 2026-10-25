@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiCode, FiTerminal, FiAward, FiArrowRight } from "react-icons/fi";
+import { FiCode, FiTerminal, FiAward, FiArrowRight, FiShield } from "react-icons/fi";
 
 const storyCards = [
   {
@@ -12,6 +12,16 @@ const storyCards = [
     badge: "Community",
     color: "from-pink-500/10 to-rose-500/5",
     accent: "text-pink-500"
+  },
+  {
+    title: "SheBuildsTech 3.0",
+    subtitle: "KSUM Incubation & Building Mirror",
+    desc: "20-hour hackathon by Kerala Startup Mission. Shortlisted from 300+ applications, building Mirror, and selected for KSUM's 6-month incubation.",
+    path: "/shebuildstech",
+    icon: FiShield,
+    badge: "KSUM Top 10",
+    color: "from-purple-500/10 to-pink-500/5",
+    accent: "text-purple-600"
   },
   {
     title: "Hackathons",
@@ -30,7 +40,7 @@ const storyCards = [
     path: "/ghci",
     icon: FiAward,
     badge: "Scholarship",
-    color: "from-purple-500/10 to-pink-500/5",
+    color: "from-rose-500/10 to-purple-500/5",
     accent: "text-pink-600"
   }
 ];
@@ -51,15 +61,15 @@ export default function ThingsIDone() {
             things i've done
           </h2>
           <p className="text-sm text-gray-500 mt-1">
-            Deep-dive stories from community building, competitions, and conferences
+            Deep-dive stories from community building, hackathons, and conferences
           </p>
         </div>
         <span className="text-pink-400 font-handwriting text-xl hidden sm:inline">
-          click any card to read the journey →
+          click any card to read the journey &rarr;
         </span>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 relative z-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
         {storyCards.map((story) => {
           const Icon = story.icon;
           return (

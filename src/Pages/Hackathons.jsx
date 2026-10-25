@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowLeft, FiArrowUpRight, FiAward, FiCpu, FiUsers, FiTerminal } from "react-icons/fi";
+import { FiArrowLeft, FiArrowUpRight, FiAward, FiCpu, FiUsers, FiTerminal, FiShield } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { hackathonsList } from "../data/hackathons";
@@ -9,6 +9,8 @@ const renderHackathonIcon = (type) => {
   switch (type) {
     case "award":
       return <FiAward className="w-6 h-6 text-emerald-600" />;
+    case "shield":
+      return <FiShield className="w-6 h-6 text-purple-600" />;
     case "cpu":
       return <FiCpu className="w-6 h-6 text-rose-500" />;
     case "users":

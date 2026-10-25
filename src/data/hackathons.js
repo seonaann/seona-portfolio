@@ -1,6 +1,17 @@
 export const hackathonsList = [
   {
     id: 1,
+    name: "SheBuildsTech 3.0",
+    headline: "Building Mirror • KSUM Incubation Winner",
+    date: "2025",
+    role: "AI & Extension Developer • Team Mirror",
+    description: "20-hour hackathon organized by Kerala Startup Mission (KSUM). Shortlisted among 31 teams out of 300+ applications nationwide.\n\nBuilt Mirror: a real-time Chrome extension that analyzes AI prompts and responses to detect implicit demographic, gender, and decision-making biases with counterfactual prompt generation. Pitched and presented live demo to industry jury.\n\nResult: Selected in the Top 10 teams for KSUM's prestigious 6-month startup incubation programme.",
+    iconType: "shield",
+    badge: "KSUM Top 10 Winner",
+    link: "https://lnkd.in/gXxYhSaQ"
+  },
+  {
+    id: 2,
     name: "SAP Hackfest 2025",
     headline: "CleanScope: From Scribbles to Nationals",
     date: "April 2025",
@@ -11,7 +22,7 @@ export const hackathonsList = [
     link: "https://www.linkedin.com/posts/seona-ann-tom_saphackfest2025-sustainability-innovation-activity-7371232807244677120-TYC1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMDgYsBYqNUidbG36hx-3Ix-HO2B_N2-LY"
   },
   {
-    id: 2,
+    id: 3,
     name: "Useless Projects 2.0",
     headline: "What The Thenga",
     date: "2025",
@@ -22,7 +33,7 @@ export const hackathonsList = [
     link: "https://www.linkedin.com/posts/arfanvanulal_sooooo-in-my-last-post-i-talked-about-organizing-ugcPost-7423723608491085824-9SUf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMDgYsBYqNUidbG36hx-3Ix-HO2B_N2-LY"
   },
   {
-    id: 3,
+    id: 4,
     name: "TinkHerHack",
     headline: "Organizing a Women-in-Tech Hackathon",
     date: "2025",
@@ -33,7 +44,7 @@ export const hackathonsList = [
     link: "https://www.linkedin.com/posts/seona-ann-tom_tinkerhub-tinkherhack-womenintech-activity-7442218101708058624-674P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMDgYsBYqNUidbG36hx-3Ix-HO2B_N2-LY"
   },
   {
-    id: 4,
+    id: 5,
     name: "Useless Projects 3.0",
     headline: "Attorney General Tab-ney Wright",
     date: "2025",

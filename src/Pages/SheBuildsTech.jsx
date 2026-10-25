@@ -1,59 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowLeft, FiAward, FiExternalLink, FiUsers, FiClock, FiShield, FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { FiArrowLeft, FiAward, FiExternalLink, FiClock, FiArrowUpRight, FiGithub } from "react-icons/fi";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-const teamAndMentors = [
-  {
-    name: "Ansa Shibu",
-    role: "Teammate • Builder",
-    note: "Co-built Mirror during the high-energy 20-hour sprint",
-    linkedin: "https://www.linkedin.com/in/ansa-shibu/",
-    badge: "Team Mirror",
-    avatarColor: "from-pink-400 to-rose-400"
-  },
-  {
-    name: "Liya Elizabeth Roji",
-    role: "Teammate • Builder",
-    note: "Key collaborator on feature execution and extension workflows",
-    linkedin: "https://www.linkedin.com/in/liya-elizabeth-roji-65794a290/",
-    badge: "Team Mirror",
-    avatarColor: "from-purple-400 to-pink-400"
-  },
-  {
-    name: "Priya Roy",
-    role: "Teammate • Builder",
-    note: "Collaborating on product strategy, pitching, and live delivery",
-    linkedin: "https://www.linkedin.com/in/priya-roy-207209291/",
-    badge: "Team Mirror",
-    avatarColor: "from-rose-400 to-pink-500"
-  },
-  {
-    name: "Aditya Manoj A",
-    role: "Mentor",
-    note: "Guidance throughout the 20 hours to get the extension and pitch ready",
-    linkedin: "https://www.linkedin.com/in/aditya-manoj-a-dev/",
-    badge: "Hackathon Mentor",
-    avatarColor: "from-amber-400 to-rose-400"
-  },
-  {
-    name: "Basil Arackal",
-    role: "Evaluation Panel",
-    note: "Jury member who tested our live demo and shared valuable feedback",
-    linkedin: "https://www.linkedin.com/in/basilarackal/",
-    badge: "Jury Panel",
-    avatarColor: "from-indigo-400 to-purple-400"
-  },
-  {
-    name: "CS Sheethal GK",
-    role: "Evaluation Panel",
-    note: "Jury member who evaluated Mirror's real-world impact and potential",
-    linkedin: "https://www.linkedin.com/in/sheethalgk/",
-    badge: "Jury Panel",
-    avatarColor: "from-emerald-400 to-teal-400"
-  }
-];
 
 export default function SheBuildsTech() {
   return (
@@ -259,6 +208,36 @@ export default function SheBuildsTech() {
                 </p>
               </div>
               <p className="mb-4">
+                Huge thanks to my teammates{" "}
+                <a
+                  href="https://www.linkedin.com/in/ansa-shibu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-pink-600 hover:text-pink-700 underline decoration-pink-300"
+                >
+                  Ansa Shibu
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.linkedin.com/in/liya-elizabeth-roji-65794a290/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-pink-600 hover:text-pink-700 underline decoration-pink-300"
+                >
+                  Liya Elizabeth Roji
+                </a>
+                , and{" "}
+                <a
+                  href="https://www.linkedin.com/in/priya-roy-207209291/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-pink-600 hover:text-pink-700 underline decoration-pink-300"
+                >
+                  Priya Roy
+                </a>
+                .
+              </p>
+              <p className="mb-4">
                 I’m really excited to see where we take Mirror from here. Thank you, Kerala Startup Mission, for this opportunity. Looking forward to the next six months!
               </p>
             </div>
@@ -286,79 +265,6 @@ export default function SheBuildsTech() {
               <span>GitHub Repository</span>
               <FiExternalLink className="w-3.5 h-3.5" />
             </a>
-          </div>
-        </motion.div>
-
-        {/* TEAM & MENTORS SECTION */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm border border-pink-100/70 mb-12"
-        >
-          <div className="mb-6">
-            <div className="flex items-center gap-2 mb-1">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 tracking-tight">
-                Team & Mentors
-              </h2>
-            </div>
-            <p className="text-xs sm:text-sm text-gray-500">
-              The builders, mentor, and evaluation panel behind the SheBuildsTech 3.0 journey
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3.5 mb-8">
-            {teamAndMentors.map((person) => (
-              <a
-                key={person.name}
-                href={person.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-4 rounded-2xl bg-purple-50/30 hover:bg-purple-100/40 border border-purple-100/70 transition-all duration-200 flex flex-col justify-between hover:-translate-y-1 hover:shadow-sm"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2.5">
-                      <div
-                        className={`w-9 h-9 rounded-xl bg-gradient-to-tr ${person.avatarColor} text-white font-bold flex items-center justify-center text-xs shadow-xs`}
-                      >
-                        {person.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-gray-800 text-sm group-hover:text-purple-600 transition-colors">
-                          {person.name}
-                        </h3>
-                        <span className="text-[10px] font-semibold text-purple-600">
-                          {person.badge}
-                        </span>
-                      </div>
-                    </div>
-
-                    <FiExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-purple-600 transition shrink-0" />
-                  </div>
-
-                  <p className="text-xs text-gray-600 leading-relaxed mt-2">
-                    {person.note}
-                  </p>
-                </div>
-
-                <div className="mt-3 pt-2 border-t border-purple-100/50 flex items-center gap-1 text-[11px] font-bold text-purple-600">
-                  <span>Connect on LinkedIn</span>
-                  <span>&rarr;</span>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* Closing Card */}
-          <div className="p-6 rounded-3xl bg-gradient-to-br from-purple-50 via-pink-50/40 to-amber-50/30 border border-purple-200/60 text-gray-700">
-            <p className="text-sm sm:text-base leading-relaxed">
-              Huge thanks to my teammates{" "}
-              <a href="https://www.linkedin.com/in/ansa-shibu/" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-700 underline">Ansa Shibu</a>,{" "}
-              <a href="https://www.linkedin.com/in/liya-elizabeth-roji-65794a290/" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-700 underline">Liya Elizabeth Roji</a>, and{" "}
-              <a href="https://www.linkedin.com/in/priya-roy-207209291/" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-700 underline">Priya Roy</a>.
-              And thank you to Kerala Startup Mission for believing in Mirror. Looking forward to the next six months!
-            </p>
           </div>
         </motion.div>
       </main>

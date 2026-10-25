@@ -80,8 +80,12 @@ export default function TinkerHub() {
               And then there were moments like Useless Projects, where I got to switch sides and just build. I collaborated with Arfan, our campus lead, and we ended up creating something completely ridiculous, an app that predicts whether a coconut might fall on your head. It made absolutely no sense. Which is exactly why it worked.
             </p>
 
+            <p>
+              Along the way, our campus chapter was recognized with two major honors: named <strong>Campus of the Month</strong> in April by the TinkerHub Foundation, and recognized as the <strong>Best Learning Community</strong> at graduation.
+            </p>
+
             {/* We Won 2 Awards */}
-            <div className="pt-4 border-t border-pink-100">
+            <div className="pt-2 border-t border-pink-100">
               <div className="grid sm:grid-cols-2 gap-4 my-2">
                 <div className="bg-amber-50/70 p-4 rounded-2xl border border-amber-200/80 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center shrink-0">

@@ -6,7 +6,7 @@ const storyCards = [
   {
     title: "TinkerHub",
     subtitle: "Community-Led Learning & Leadership",
-    desc: "From showing up to organizing study jams, Survive ML, and TinkHerHack. Cultivating spaces where curiosity thrives.",
+    desc: "From showing up to organizing study jams, Survive ML, and TinkHerHack — winning Campus of the Month and Best Learning Community along the way.",
     path: "/tinkerhub",
     icon: FiCode,
     badge: "Community",
